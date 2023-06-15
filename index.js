@@ -4,4 +4,19 @@ const returnFirstTwoDrivers = function(drivers) {
   };
   
 const drivers = ["Antonia", "Nuru", "Amari", "Mo"];
-console.log(returnFirstTwoDrivers(drivers)); // return: ["Antonia", "Nuru"]
+console.log(returnFirstTwoDrivers(drivers)); 
+
+const returnLastTwoDrivers = function(drivers) {
+    return drivers.slice(-2);
+  };
+  
+  const selectingDrivers = [
+    returnFirstTwoDrivers,
+    returnLastTwoDrivers
+  ];
+  function createFareMultiplier(integer) {
+    return function(fare) {
+      return fare * integer;
+    };
+  }
+  const fareDoubler = createFareMultiplier(2);
